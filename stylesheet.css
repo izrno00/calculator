@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder {
+    display: flex;
+    padding-bottom: 8px;
+    background-color: rgb(40, 40, 40);
+    border-radius: 15px;
+}
+
+.calc {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 600px;
+    background-color: rgb(80, 80, 80);
+    padding: 8px 0;
+    border-radius: 15px;
+}
+
+.screen {
+    padding: 0 20px;
+    display: flex;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(40, 40, 40);
+    border-radius: 15px 15px 0 0;
+}
+
+.buttons {
+    height: 70%;
+    background-color: rgb(80, 80, 80);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.screen div {
+    background-color: rgb(210, 210, 210);
+    flex: auto;
+    height: 62%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 0 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.digit, .operator, .backspace, .percent, .ac, .equal {
+    display: flex;
+    background-color: azure;
+    font-weight: bold;
+    font-size: 50px;
+    width: 100px;
+    height: 70px;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.orange {
+    background-color: orange;
+    color: white;
+}
+
+.test {
+    border: solid, 2px, red;
+}
+
+.clicked {
+    background-color: white;
+    border: solid, 0.5px, black;
+}
