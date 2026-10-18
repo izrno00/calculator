@@ -41,7 +41,7 @@ function operate(firstNum, secondNum, operator) {
 
 }
 
-let firstNumber;
+let firstNumber = "";
 let secondNumber;
 let operator;
 
@@ -54,13 +54,20 @@ const btnEqual = document.querySelector(".equal");
 
 
 clearBtn.addEventListener("click", () => {
-    firstNumber = secondNumber = operator = undefined
+    firstNumber = secondNumber = operator = "";
     return display.textContent = "";
 });
 
 
 for(let i = 0; i < digitBtn.length; i++) {
-    digitBtn[i].addEventListener("click", () => display.textContent += digitBtn[i].textContent);
+
+    digitBtn[i].addEventListener("click", () => {
+        
+        firstNumber += digitBtn[i].textContent
+        display.textContent = firstNumber;
+        return parseFloat(firstNumber);
+    
+    });
 
 };
 
@@ -68,15 +75,13 @@ for(let i = 0; i < operatorBtn.length; i++) {
 
     operatorBtn[i].addEventListener("click", () => {
 
-        if(display.textContent)
-
         operator = operatorBtn[i].textContent;
-        firstNumber = parseFloat(display.textContent);
+        firstNumber = parseFloat(firstNumber);
+    
     
         }
     );
 }
-
 
 
 
