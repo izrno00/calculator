@@ -122,9 +122,6 @@ btnEqual.addEventListener('click', () => {
 });
 
 
-let num = 2.6572;
-console.log(num.toFixed(2));
-
 
 
 
