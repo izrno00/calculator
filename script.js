@@ -41,7 +41,7 @@ function operate(firstNum, secondNum, operator) {
         result = divide(firstNum, secondNum);
     }
 
-    result = result.toFixed(2);
+    result = Math.round(result * 100) / 100;
     return result;
 
 
@@ -120,6 +120,7 @@ btnEqual.addEventListener('click', () => {
     firstNumber = secondNumber = operator = "";
 
 });
+
 
 
 
