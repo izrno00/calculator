@@ -41,6 +41,7 @@ function operate(firstNum, secondNum, operator) {
         result = divide(firstNum, secondNum);
     }
 
+    result = result.toFixed(2);
     return result;
 
 
@@ -62,7 +63,7 @@ const btnEqual = document.querySelector(".equal")
 clearBtn.addEventListener("click", () => {
     firstNumber = secondNumber = operator = "";
     result = undefined;
-    return display.textContent = "";
+    display.textContent = "";
 });
 
 
@@ -118,7 +119,12 @@ btnEqual.addEventListener('click', () => {
     display.textContent = result;
     firstNumber = secondNumber = operator = "";
 
-})
+});
+
+
+let num = 2.6572;
+console.log(num.toFixed(2));
+
 
 
 
